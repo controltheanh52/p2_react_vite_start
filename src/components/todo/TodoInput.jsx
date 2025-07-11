@@ -1,0 +1,10 @@
+const TodoInput = () =>{
+    return(
+        <div className="d-flex justify-content-center mt-2">
+          <input type="text" placeholder="Enter your task" className="form-control-sm"></input>
+          <button className="btn btn-primary">Add</button>
+        </div>
+    );
+}
+
+export default TodoInput;
