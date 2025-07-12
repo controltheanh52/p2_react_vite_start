@@ -1,16 +1,22 @@
+import { useState } from "react";
+
 const TodoInput = (props) =>{
 
+    //useState hook
+    //const valueUserInput = "";
+    //destructuring Array
+    const [valueUserInput, setValueInput] = useState("The Anh")
     console.log(">>> check point: ", props);
     const {addNewTodo} = props;
     //addNewTodo();
 
 
     const handleClick = () =>{
-      alert("handle click button")
+      console.log("check: ", valueUserInput);
     }
 
     const handleOnchange = (name) =>{
-      console.log("handlOnChange", name);
+      setValueInput(name);
     }
 
     //onChange ={() => function} using arrow function for the function that have a diffrent parameter
@@ -20,8 +26,8 @@ const TodoInput = (props) =>{
           onChange={(event) => handleOnchange(event.target.value)}
           ></input>
 
-
           <button className="btn btn-primary" onClick={handleClick}>Add</button>
+          <div>My text input = {valueUserInput}</div>
         </div>
     );
 }
