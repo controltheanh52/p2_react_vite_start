@@ -15,9 +15,18 @@ const App = () => {
       {id: 2, name: "Learning HTML"},  
     ])
 
-    const addNewTodo = (text) =>{
-      alert(`call me ${text}`);
+    const addNewTodo = (name) =>{
+      const newTodo = {
+        id: randomInt(1, 1000),
+        name: name
+      }
+      setTodoList([...todoList, newTodo])
     }
+
+    const randomInt = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    
     //{key: value}
   return (
     <div className="todo-container">

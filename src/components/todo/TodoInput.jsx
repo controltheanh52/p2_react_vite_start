@@ -13,6 +13,7 @@ const TodoInput = (props) =>{
 
     const handleClick = () =>{
       console.log("check: ", valueUserInput);
+      addNewTodo(valueUserInput);
     }
 
     const handleOnchange = (name) =>{
