@@ -12,7 +12,7 @@ const TodoDisplay = (props) => {
           {todoList.map((item, index) => {
             
             return (
-              <div className="todoDisplay">
+              <div className={`todoDisplay`} key = {item.id}>
                 <div>{item.name}</div>
                 <button>delete</button>
               </div>

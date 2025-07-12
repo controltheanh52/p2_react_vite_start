@@ -4,15 +4,8 @@ import TodoInput from "./components/todo/TodoInput";
 import react_logo from "./assets/react.svg";
 import { useState } from "react";
 const App = () => {
-    const theanh = "control";
-    const data = {
-      address: "TPHCM",
-      country: "Vietnam"
-    }
     
     const [todoList, setTodoList] = useState([
-      {id: 1, name: "Learning React"},
-      {id: 2, name: "Learning HTML"},  
     ])
 
     const addNewTodo = (name) =>{
@@ -26,7 +19,7 @@ const App = () => {
     const randomInt = (min, max) => {
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    
+
     //{key: value}
   return (
     <div className="todo-container">
@@ -35,8 +28,6 @@ const App = () => {
          addNewTodo={addNewTodo}
         />
         <TodoDisplay
-          name = {theanh}
-          data = {data}
           todoList = {todoList}
         />
         <div className="text-center fs-2">
