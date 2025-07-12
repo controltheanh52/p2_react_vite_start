@@ -9,14 +9,18 @@ const TodoInput = (props) =>{
       alert("handle click button")
     }
 
-    const handleOnchange = (event) =>{
-      console.log("handlOnChange", event.target.value);
+    const handleOnchange = (name) =>{
+      console.log("handlOnChange", name);
     }
+
+    //onChange ={() => function} using arrow function for the function that have a diffrent parameter
     return(
         <div className="d-flex justify-content-center mt-2">
           <input type="text" placeholder="Enter your task" className="form-control-sm"
-          onChange={handleOnchange}
+          onChange={(event) => handleOnchange(event.target.value)}
           ></input>
+
+
           <button className="btn btn-primary" onClick={handleClick}>Add</button>
         </div>
     );
