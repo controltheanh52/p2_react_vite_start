@@ -9,7 +9,7 @@ const App = () => {
       country: "Vietnam"
     }
   return (
-
+    //{key: value}
     
     <div className="todo-container">
         <div className="fs-2 text-center text-danger fw-bold">ToDo List</div>
