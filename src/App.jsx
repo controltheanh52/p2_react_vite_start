@@ -8,12 +8,18 @@ const App = () => {
       address: "TPHCM",
       country: "Vietnam"
     }
+
+    const addNewTodo = (text) =>{
+      alert(`call me ${text}`);
+    }
   return (
     //{key: value}
     
     <div className="todo-container">
         <div className="fs-2 text-center text-danger fw-bold">ToDo List</div>
-        <TodoInput/>
+        <TodoInput
+         addNewTodo={addNewTodo}
+        />
         <TodoDisplay
           name = {theanh}
           data = {data}
