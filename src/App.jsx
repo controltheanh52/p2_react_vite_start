@@ -27,12 +27,32 @@ const App = () => {
         <TodoInput
          addNewTodo={addNewTodo}
         />
-        <TodoDisplay
-          todoList = {todoList}
-        />
-        <div className="text-center fs-2">
-          <img className = "logo"src={react_logo}/>
-        </div>
+
+
+        {todoList.length > 0 ? 
+          <TodoDisplay
+            todoList = {todoList}
+          />
+          :
+          <div className="text-center fs-2">
+            <img className = "logo"src={react_logo}/>
+          </div>
+      
+        }
+
+        {/* {todoList.length > 1 && 
+          <TodoDisplay
+            todoList = {todoList}
+          />
+
+        }
+
+        {todoList.length === 0 &&
+          <div className="text-center fs-2">
+            <img className = "logo"src={react_logo}/>
+          </div>
+        } */}
+        
     </div>
   )
 }

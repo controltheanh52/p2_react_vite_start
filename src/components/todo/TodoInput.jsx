@@ -6,13 +6,11 @@ const TodoInput = (props) =>{
     //const valueUserInput = "";
     //destructuring Array
     const [valueUserInput, setValueInput] = useState("")
-    console.log(">>> check point: ", props);
     const {addNewTodo} = props;
     //addNewTodo();
 
 
     const handleClick = () =>{
-      console.log("check: ", valueUserInput);
       addNewTodo(valueUserInput);
       setValueInput("");
     }
