@@ -2,7 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';//step 1
+import LoginPage from './pages/login.jsx';
+import RegisterPage from './pages/register.jsx';
+import UserPage from './pages/users.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import "./styles/global.css"
 const router = createBrowserRouter([ //step 2
   {
     path: "/",
@@ -10,22 +15,23 @@ const router = createBrowserRouter([ //step 2
   },
   {
     path: "/login",
-    element:<div>login</div>
+    element: <LoginPage/>
   },
   {
     path: "/register",
-    element:<div>login</div>
+    element:<RegisterPage/>
   },
   {
     path: "/users",
-    element:<div>User</div>
+    element:<UserPage/>
   },
   {
     path: "/products",
-    element:<div>product</div>
+    element:<ProductPage/>
   }
 ])
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import ProductPage from './pages/product.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
